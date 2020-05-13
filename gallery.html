@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nature Conserved</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<!--icon
+	<link rel="shortcut icon" type="image/png" href="img/camera-icon.png"/>-->
+</head>
+
+<body style="background-color:rgb(88,88,88);">
+<div class="container">
+	<br>
+	<nav class="navbar navbar-default navbar-top my-nav">
+		<div class="navbar-header">
+		  <a class="navbar-brand text" href="/index.html" align="left"><b>Nature Conserved</b></a>
+		</div>
+		<ul class="nav navbar-nav my-nav navbar-right">
+			<li><a class="text"href="/index.html">Home</a></li>
+			<li class="dropdown"><a class="text" href="#">Gallery</a></li>
+			<li class="dropdown"><a href="#" class="dropdown-toggle text" data-toggle="dropdown">Animals</a></li>
+			<li><a href="#" class="text">About&nbsp;&nbsp;</a></li>
+		</ul>
+	</nav>
+	<style>
+		
+		.my-nav {
+			z-index: 9;
+			background: none;
+			border: 0;
+		}
+		.navbar-brand {
+			background: none;
+			border: 0;
+			border-radius: 0;
+			z-index: 9;
+		}
+		.my-nav .navbar-nav a {
+			color: white !important;
+			font-family: "Courier-New";
+			font-size: 150%;
+			letter-spacing: 0.01em;
+		}
+		.navbar-brand b{
+			color: white !important;
+			font-family: "Courier-New";
+			font-size: 150%;
+			letter-spacing: 0.01em;
+		}
+	</style>	
+</div>
+<div class="container">
+	<div class="content" id="content">
+		<div class="image one">
+			<img src="Bison 2.jpg">
+		</div>
+		<div class="image two">
+			<img src="Bison.jpg">
+		</div>
+		<div class="image three">
+			<img src="Crow.jpg">
+		</div>
+		<div class="image four">
+			<img src="Bison 5.jpg">
+		</div>
+		<div class="image five">
+			<img src="Pronghorn Antelope 2.jpg">
+		</div>
+		<div class="image six">
+			<img src="Bison 5.jpg">
+		</div>
+		<div class="image seven">
+			<img src="">
+		</div>
+		<div class="image eight">
+			<img src="">
+		</div>
+	</div>
+</div>
+<style>
+	.content {
+		display: grid;
+		grid-template-columns: repeat(64, 1fr);
+		grid-auto-rows: minmax(150px, auto);
+		grid-gap: 10px;
+		margin: 0 auto;
+	}
+	.content .image img {
+		width: 100%;
+		height: auto;
+	}
+	.one {
+		grid-column: span 20;
+		
+		background: red;
+	}
+	.two {
+		grid-column: span 24;
+		background: orange;
+	}
+	.three {
+		grid-column: span 20;
+		background: yellow;
+	}
+	.four {
+		grid-column: span 32;
+		grid-row: 2/3;
+		background: green;
+	}
+	.five {
+		grid-column: span 32;
+		grid-rows: 1/10;
+		background: blue;
+	}
+</style>
+</body>
+</html>
