@@ -8,25 +8,24 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<!--icon
-	<link rel="shortcut icon" type="image/png" href="img/camera-icon.png"/>-->
+	<link rel="shortcut icon" type="image/png" href="logo.svg">
 </head>
 
 <body>
-<div style="background-color:rgb(88,88,88);">
-	<div class="container">
-		<br>
-		<nav class="navbar navbar-default navbar-top my-nav">
-			<div class="navbar-header brand-title">
-			  <a class="navbar-brand text" href="/index.html" align="left"><b>Nature Conserved</b></a>
-			</div>
+<div class="container">
+	<div class="container" style="background-color: white">
+		<nav class="navbar my-nav">
+			<img class="logo" src="logo2.svg" alt="Logo" height="auto"></img>
+		</nav>
+		<hr>
+		<nav class="navbar my-nav">
 			<a href="#" class="toggle-button">
 				<span class="bar"></span>
 				<span class="bar"></span>
 				<span class="bar"></span>
 			</a>
 			<div class="navbar-links">
-			<ul class="nav navbar-nav my-nav navbar-right">
+			<ul class="navbar-right">
 				<li><a class="text"href="/index.html">Home</a></li>
 				<li class="dropdown"><a class="text" href="/gallery.html">Gallery</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle text" data-toggle="dropdown">Animals</a></li>
@@ -34,6 +33,133 @@
 			</ul>
 			</div>
 		</nav>
+	</div>
+</div>
+	<style>
+		* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: none;
+   
+}
+
+.navbar-header {
+	width: 100%;
+}
+
+.logo {
+	display: block;
+	margin: 0;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	max-width: 45%;
+	height: auto;
+}
+
+.brand-title {
+	margin: 0;
+	padding: 0;
+	font-family: "Courier-New";
+    font-size: 150%;
+	color: grey !important;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+	
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+	color: rgb(88,88,88);
+    padding: 1rem;
+	font-family: "Courier-New";
+	font-size: 150%;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+	</style>
+	<script type="text/javascript">
+		const toggleButton = document.getElementsByClassName('toggle-button')[0]
+		const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+			
+		toggleButton.addEventListener('click', () => {
+			navbarLinks.classList.toggle('active')
+		})
+	</script>
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		  <!-- Indicators -->
 		  <ol class="carousel-indicators">
@@ -75,33 +201,6 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 			<script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
 			<style>
-				.container {
-					height: 200 px;
-				}
-				.my-nav {
-					z-index: 9;
-					background: none;
-					border: 0;
-					
-				}
-				.navbar-brand {
-					background: none;
-					border: 0;
-					border-radius: 0;
-					z-index: 9;
-				}
-				.my-nav .navbar-nav a {
-					color: white !important;
-					font-family: "Courier-New";
-					font-size: 150%;
-					letter-spacing: 0.01em;
-				}
-				.navbar-brand b{
-					color: white !important;
-					font-family: "Courier-New";
-					font-size: 150%;
-					letter-spacing: 0.01em;
-				}
 				.my-carousel {
 					<!--top: -100px;-->
 					height: 2000 px;
@@ -110,85 +209,7 @@
 				}
 				.carousel .carousel-control { visibility: hidden; }
 				.carousel:hover .carousel-control { transition: opacity 800ms; visibility: visible; background: none;}
-					
-			.navbar-links li a {
-				display: block;
-			}
-			
-			.navbar-links li:hover{
-				background-color: gray;
-			}
-			
-			.toggle-button {
-				position: absolute;
-				top: .75rem;
-				right: 1rem;
-				display: none;
-				flex-direction: column;
-				justify-content: space-between;
-				width: 30px;
-				height: 21px;
-			}
-			
-			.toggle-button .bar {
-				height: 3px;
-				width: 100%;
-				background-color: white;
-				border-radius: 10px; 
-				border-radius: 10px;
-			}
-			
-			@media (max-width: 770px) {
-				.toggle-button {
-					display: flex;
-				}
-				
-				.navbar-links {
-					display: none;
-					width: 100%;
-				}
-				
-				.navbar {
-					flex-direction: column;
-					align-items: flex-start;
-				}
-				
-				.navbar-links ul {
-					width: 100%;
-					flex-direction: column;
-				}
-				
-				.navbar-links li {
-					text-align: left;
-					padding-left: 2rem;
-				}
-				
-				.navbar-links li a {
-					padding: .5rem 1rem;
-				}
-				
-				.navbar-links.active {
-					display: flex;
-				}
-			}
-	</style>
-	<script type="text/javascript">
-		const toggleButton = document.getElementsByClassName('toggle-button')[0]
-		const navbarLinks = document.getElementsByClassName('navbar-links')[0]
-			
-		toggleButton.addEventListener('click', () => {
-			navbarLinks.classList.toggle('active')
-		})
-	</script>
-			
-	
-	<br><br>
-	</div>
-	</div>
-</div>
-<br><br>
-
-
+			</style>
 <div class="container" style="background-color: white">
 	<div class="row">
 		<div class="about col-sm-6" style="font-family: Arial">
