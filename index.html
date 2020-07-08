@@ -15,24 +15,28 @@
 <div class="container">
 	<div class="container" style="background-color: white">
 		<nav class="navbar my-nav">
+			<div class="logo1">
 			<img class="logo" src="logo2.svg" alt="Logo" height="auto"></img>
-		</nav>
-		<hr>
-		<nav class="navbar my-nav">
+			<hr>
 			<a href="#" class="toggle-button">
 				<span class="bar"></span>
 				<span class="bar"></span>
 				<span class="bar"></span>
 			</a>
-			<div class="navbar-links">
-			<ul class="navbar-right">
-				<li><a class="text"href="/index.html">Home</a></li>
-				<li class="dropdown"><a class="text" href="/gallery.html">Gallery</a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle text" data-toggle="dropdown">Animals</a></li>
-				<li><a href="#" class="text">About&nbsp;&nbsp;</a></li>
-			</ul>
 			</div>
+			<div class="navbar-links">
+				<ul class="navbar-center">
+					<li><a class="text"href="/index.html">Home</a></li>
+					<li class="dropdown"><a class="text" href="/gallery.html">Gallery</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle text" data-toggle="dropdown">Animals</a></li>
+					<li><a href="#" class="text">About</a></li>
+					<li><a href="#" class="text">Contact</a></li>
+				</ul>
+				
+			</div>
+			<hr>
 		</nav>
+		
 	</div>
 </div>
 	<style>
@@ -40,28 +44,30 @@
     box-sizing: border-box;
 }
 
-body {
+.body {
     margin: 0;
     padding: 0;
 }
 
-.navbar {
-    background-color: none;
-   
+hr {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  border-width: 1px;
 }
 
-.navbar-header {
-	width: 100%;
+.navbar {
+   background-color: none;
+   max-height: 100%;
 }
 
 .logo {
 	display: block;
 	margin: 0;
-	padding: 10px;
+	padding: 0;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 10px;
-	max-width: 45%;
+	margin-top: 1rem;
+	max-width: 32.5%;
 	height: auto;
 }
 
@@ -74,25 +80,36 @@ body {
 }
 
 .navbar-links {
-    height: 100%;
+	display: flex;
+	justify-content: space-between;
+    max-height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 .navbar-links ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
+	display: flex 	;
+	margin: 0;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 75%;
+	max-width: 75%;
+	
 	
 }
 
 .navbar-links li {
     list-style: none;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .navbar-links li a {
     display: block;
     text-decoration: none;
 	color: rgb(88,88,88);
-    padding: 1rem;
+ 
 	font-family: "Courier-New";
 	font-size: 150%;
 }
@@ -103,7 +120,7 @@ body {
 
 .toggle-button {
     position: absolute;
-    top: .75rem;
+    top: auto;
     right: 1rem;
     display: none;
     flex-direction: column;
@@ -124,10 +141,19 @@ body {
         flex-direction: column;
         align-items: flex-start;
     }
-
+	
+	.logo1 {
+		display: flex;
+		align-items: center;
+	}
+	
     .toggle-button {
         display: flex;
     }
+	
+	hr {
+		display: none;
+	}
 
     .navbar-links {
         display: none;
