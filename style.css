@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+}
+/* hr color */
+hr {
+  margin-top: 0.5rem !important;
+  margin-bottom: 1rem !important;
+  border-color: #d9d9d9 !important;
+}
+
+.navbar {
+  background-color: none;
+  max-height: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+.logo {
+  display: block;
+  padding: 0;
+  padding-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  max-width: 32.5%;
+  height: auto;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: space-between;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links ul {
+  display: flex 	;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 75%;
+  max-width: 75%;
+}
+
+.navbar-links li {
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: #fefefe !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 150%;
+}
+/* Change color of line when hovering on navbar links */
+li:hover hr{
+  border-color: #ffffff !important;
+  height: 10px;
+}
+/* Change color of navbar links when hovering */
+.navbar-links li:hover {
+  color: #555;
+}
+/* Position of expand button */
+.toggle-button {
+  position: absolute;
+  top: auto;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+/* Properties of expand button */
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: grey;
+  border-radius: 10px;
+}
+/* Navbar changes for smaller screen */
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo1 {
+    display: flex;
+    align-items: center;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links ul li {
+    text-align: center;
+  }
+
+  .navbar-links ul li a {
+    padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #333;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.slider {
+  position: relative;
+  overflow-x: hidden !important;
+  height: 100vh;
+  width: 100vw;
+}
+/* Slides not visible, transition */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+/* Turns current slide visible */
+.slide.current {
+  opacity: 1;
+}
+
+.slide .current .content {
+  opacity: 1;
+  transform: translateX(600px);
+  transition: all 1s ease-in-out 0.3s;
+}
+
+.slidercenter {
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  color: #fefefe !important;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 300% !important;
+}
+
+.name {
+  text-align: center;
+  font-size: 125% !important;
+  font-stretch: condensed !important;
+  overflow: hidden;
+}
+
+h3 {
+  text-align: center;
+  overflow: hidden;
+}
+.buttons button#next {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+}
+
+.buttons button#prev {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+}
+
+.buttons button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.buttons button:hover {
+  background-color: #fff;
+  color: #333;
+}
+/* Slider changes for small screen */
+@media (max-width: 500px) {
+  .slide .content {
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+  }
+
+  .slide.current .content {
+    transform: translateY(-300px);
+  }
+}
+
+
+
+/* Backgorund Images */
+.slide:first-child {
+  background: url('images/Barn15.jpg') no-repeat
+  center top/cover;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;          /* Firefox */
+  image-rendering: -o-crisp-edges;            /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
+}
+.slide:nth-child(2) {
+  background: url('images/Cypress Tree2.jpg') no-repeat
+  center top/cover;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;          /* Firefox */
+  image-rendering: -o-crisp-edges;            /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
+}
+.slide:nth-child(3) {
+  background: url('images/Barn15.jpg') no-repeat
+  center top/cover;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;          /* Firefox */
+  image-rendering: -o-crisp-edges;            /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
+}
+.slide:nth-child(4) {
+  background: url('images/Bison in Snow.jpg') no-repeat
+  center top/cover;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;          /* Firefox */
+  image-rendering: -o-crisp-edges;            /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
+}
+.slide:nth-child(5) {
+  background: url('images/Duck.jpg') no-repeat
+  center top/cover;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;          /* Firefox */
+  image-rendering: -o-crisp-edges;            /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
+}
+.slide:nth-child(6)  {
+  background: url('images/Barn Swallows.jpg') no-repeat
+  center center/cover;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;          /* Firefox */
+  image-rendering: -o-crisp-edges;            /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
+}
+
+.column1 {
+  background-color: #fefefe;
+
+}
+
+.column1 h1 {
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 300%;
+}
+
+.column1 p {
+  color: red;
+}

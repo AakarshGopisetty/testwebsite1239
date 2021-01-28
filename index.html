@@ -1,269 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Nature Conserved</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<link rel="shortcut icon" type="image/png" href="logo.svg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>AakarshG Photo</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+  integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+  crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-<div class="container">
-	<div class="container" style="background-color: white">
-		<nav class="navbar my-nav">
-			<div class="logo1">
-			<img class="logo" src="logo2.svg" alt="Logo" height="auto"></img>
-			<hr>
-			<a href="#" class="toggle-button">
-				<span class="bar"></span>
-				<span class="bar"></span>
-				<span class="bar"></span>
-			</a>
-			</div>
-			<div class="navbar-links">
-				<ul class="navbar-center">
-					<li><a class="text"href="/index.html">Home</a></li>
-					<li class="dropdown"><a class="text" href="/gallery.html">Gallery</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle text" data-toggle="dropdown">Animals</a></li>
-					<li><a href="#" class="text">About</a></li>
-					<li><a href="#" class="text">Contact</a></li>
-				</ul>
-				
-			</div>
-			<hr>
-		</nav>
-		
-	</div>
-</div>
-	<style>
-		* {
-    box-sizing: border-box;
-}
+  <!-- Slider -->
+  <div class="slider">
+    <div class="container">
+      <!-- Navigation Bar -->
+      <nav class="navbar my-nav">
+        <!-- Logo and Expand Button; for smaller screen -->
+        <div class="logo1">
+          <a href="/index.html"><img class="logo" src="logo2.svg" alt="Logo" height="auto"></img></a>
+          <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+        </div>
+        <!-- Links for larger screen -->
+        <div class="navbar-links">
+          <ul class="navbar-center">
+            <li><a class="text"href="/index.html">HOME</a><hr></li>
+            <li class="dropdown"><a class="text" href="/gallery.html">GALLERY</a><hr></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle text" data-toggle="dropdown">ANIMALS</a><hr></li>
+            <li><a href="#" class="text">ABOUT</a><hr></li>
+            <li><a href="#" class="text">CONTACT</a><hr></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Slides 1-6 in slider -->
+    <div class="slide current"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+  </div>
+  <!-- Left/Right buttons for slider -->
+  <div class="buttons">
+    <button id="prev"><i class="fas fa-arrow-left"></i></button>
+    <button id="next"><i class="fas fa-arrow-right"></i></button>
+  </div>
+  <!-- Text in middle of slider -->
+  <div class="slidercenter">
+    <h1 class="name">AAKARSH GOPISETTY</h1>
+    <hr class="hr2">
+    <h3 class="subheader">Nature and Wildlife Photography</h3>
+  </div>
 
-.body {
-    margin: 0;
-    padding: 0;
-}
-
-hr {
-  margin-top: 1rem !important;
-  margin-bottom: 1rem !important;
-  border-width: 1px;
-}
-
-.navbar {
-   background-color: none;
-   max-height: 100%;
-}
-
-.logo {
-	display: block;
-	padding: 0;
-	padding-bottom: 1rem;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 1rem;
-	max-width: 32.5%;
-	height: auto;
-}
-
-
-.navbar-links {
-	display: flex;
-	justify-content: space-between;
-    max-height: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-.navbar-links ul {
-	display: flex 	;
-	margin: 0;
-	padding: 0;
-	margin-left: auto;
-	margin-right: auto;
-	min-width: 75%;
-	max-width: 75%;
-	
-	
-}
-
-.navbar-links li {
-    list-style: none;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.navbar-links li a {
-    display: block;
-    text-decoration: none;
-	color: rgb(88,88,88);
- 
-	font-family: "Courier-New";
-	font-size: 150%;
-}
-
-.navbar-links li:hover {
-    background-color: #555;
-}
-
-.toggle-button {
-    position: absolute;
-    top: auto;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-}
-
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: grey;
-    border-radius: 10px;
-}
-
-@media (max-width: 800px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-	
-	.logo1 {
-		display: flex;
-		align-items: center;
-	}
-	
-    .toggle-button {
-        display: flex;
-    }
-	
-	hr {
-		display: none;
-	}
-
-    .navbar-links {
-        display: none;
-        width: 100%;
-    }
-
-    .navbar-links ul {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .navbar-links ul li {
-        text-align: center;
-    }
-
-    .navbar-links ul li a {
-        padding: .5rem 1rem;
-    }
-
-    .navbar-links.active {
-        display: flex;
-    }
-}
-	</style>
-	<script type="text/javascript">
-		const toggleButton = document.getElementsByClassName('toggle-button')[0]
-		const navbarLinks = document.getElementsByClassName('navbar-links')[0]
-			
-		toggleButton.addEventListener('click', () => {
-			navbarLinks.classList.toggle('active')
-		})
-	</script>
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-		  <!-- Indicators -->
-		  <ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-			<li data-target="#myCarousel" data-slide-to="3"></li>
-		  </ol>
-		<div class="container container1">
-		  <!-- Wrapper for slides -->
-		  <div class="carousel-inner">
-			<div class="item active">
-			  <img src="Pronghorn Antelope.JPG" alt="Pronghorn Antelope">
-			</div>
-
-			<div class="item">
-			  <img src="Barn Swallows.jpg" alt="Barn Swallows">
-			</div>
-
-			<div class="item">
-			  <img src="Moose.JPG" alt="Moose">
-			</div>
-			<div class="item">
-			  <img src="Barrow's Goldeneye.jpg" alt="Barrow's Goldeneye">
-			</div>
-		  </div>
-
-		  <!-- Left and right controls -->
-		  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-			<span class="sr-only">Previous</span>
-		  </a>
-		  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-			<span class="sr-only">Next</span>
-		  </a>
-		</div>
-			<!-- jQuery first, then Bootstrap JS. -->
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-			<script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
-			<style>
-				.my-carousel {
-					<!--top: -100px;-->
-					height: 2000 px;
-					z-index: -1;
-					background: none;
-				}
-				.carousel .carousel-control { visibility: hidden; }
-				.carousel:hover .carousel-control { transition: opacity 800ms; visibility: visible; background: none;}
-			</style>
-<div class="container" style="background-color: white">
-	<div class="row">
-		<div class="about col-sm-6" style="font-family: Arial">
-			<h1 style="text-align: center">About</h1>
-			<strong>Who:</strong>
-			<p style=>We are an organization located in the San Francisco Bay Area committed to the preservation of Earth's natural features.</p>
-			<strong>What:</strong>
-			<p>Through wildlife and nature photography, we want to convey the beauty in Earth's natural ecosystems. Our goal is to inform individuals about nature and wildlife; to bring about in them a better understanding of the world they live in. We hope to spark the passion and fascination for the natural world that not enough people know.</p>
-			<strong>Why:</strong>
-			<p>In this day and age, too many things are being taken for granted. Learning about the natural world gives perspective; a better understanding of what life is. There is more to this world than smartphones and wifi. Struggles, miracles, hunger, power; these are facets of life that deserve to be told. In this day and age, nature is the easiest thing to take for granted. If this does not change, it will continue to perish.</p>
-			<style>
-				.about {
-					font-family: "Courier-New";
-					font-size: 150%;
-					color: black;
-					letter-spacing: 0.01em;
-			</style>
-		</div>
-		<br>
-		<div class="col-sm-6" style="text-align:right">
-			<img class="responsive" src="Bison.jpg" alt="American Bison" height="650px">
-		</div>
-		<style>
-			.responsive {
-				max-width: 100%;
-				height: auto;
-			}
-		</style>
-	</div>
-	<hr>
-	<div class="row">
-		<div class="about col-sm-6" style="font-family: Arial">
-			<h1 style="text-align:center">Contact</h1>
-		</div>
-	</div>
-</div>
+  <div class="about">
+    <div class="row">
+      <div class="col-sm-6 column1">
+        <h1>About Me</h1>
+        <p>hello</p>
+      </div>
+      <div class="col-sm-6 column2">
+        <p>hi</p>
+      </div>
+    </div>
+  </div>
+  <!-- Javascript page -->
+  <script src="main.js"></script>
 </body>
 </html>
