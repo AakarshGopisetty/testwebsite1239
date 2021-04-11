@@ -244,7 +244,7 @@ h3 {
   -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
 }
 .slide:nth-child(2) {
-  background: url(Cypress Tree2.jpg) no-repeat
+  background: url('wildphotoadventure/Cypress Tree2.jpg') no-repeat
   center top/cover;
   image-rendering: crisp-edges;
   image-rendering: -moz-crisp-edges;          /* Firefox */
@@ -253,7 +253,7 @@ h3 {
   -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
 }
 .slide:nth-child(3) {
-  background: url('Barn15.jpg') no-repeat
+  background: url(Barn15.jpg) no-repeat
   center top/cover;
   image-rendering: crisp-edges;
   image-rendering: -moz-crisp-edges;          /* Firefox */
@@ -262,7 +262,7 @@ h3 {
   -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
 }
 .slide:nth-child(4) {
-  background: url('Bison in Snow.jpg') no-repeat
+  background: url(Bison in Snow.jpg) no-repeat
   center top/cover;
   image-rendering: crisp-edges;
   image-rendering: -moz-crisp-edges;          /* Firefox */
@@ -271,7 +271,7 @@ h3 {
   -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
 }
 .slide:nth-child(5) {
-  background: url('Duck.jpg') no-repeat
+  background: url(Duck.jpg) no-repeat
   center top/cover;
   image-rendering: crisp-edges;
   image-rendering: -moz-crisp-edges;          /* Firefox */
@@ -280,7 +280,7 @@ h3 {
   -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
 }
 .slide:nth-child(6)  {
-  background: url('Barn Swallows.jpg') no-repeat
+  background: url(Barn Swallows.jpg) no-repeat
   center center/cover;
   image-rendering: crisp-edges;
   image-rendering: -moz-crisp-edges;          /* Firefox */
